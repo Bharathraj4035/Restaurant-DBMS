@@ -1,3 +1,4 @@
+-- Created Tables for Restaurant DBMS
 CREATE TABLE customer (
     customer_id VARCHAR2(20)NOT NULL,
     cname VARCHAR2(40) NOT NULL,
