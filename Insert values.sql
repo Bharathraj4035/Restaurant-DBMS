@@ -1,4 +1,5 @@
 -- Customers
+
 INSERT INTO customer (customer_id, cname, phone_number, cpassword, address, dob) VALUES
 ('CUST001', 'Rahul Sharma', '9876543210', 'rahul123', '12 MG Road, Mumbai', TO_DATE('1990-06-15','YYYY-MM-DD'));
 INSERT INTO customer (customer_id, cname, phone_number, cpassword, address, dob) VALUES
@@ -11,6 +12,7 @@ INSERT INTO customer (customer_id, cname, phone_number, cpassword, address, dob)
 ('CUST005', 'Karan Singh', '9988776655', 'karan654', '56 SG Highway, Ahmedabad', TO_DATE('1987-07-30','YYYY-MM-DD'));
 
 -- Staff
+
 INSERT INTO staff (staff_id, sname, srole, email_id, phone_number, spassword, address, dob) VALUES
 ('STAFF01', 'Suresh Kumar', 'Manager', 'suresh@restaurant.in', '9090909090', 'sureshpass', '1 Residency Rd, Delhi', TO_DATE('1980-01-10','YYYY-MM-DD'));
 INSERT INTO staff (staff_id, sname, srole, email_id, phone_number, spassword, address, dob) VALUES
@@ -23,6 +25,7 @@ INSERT INTO staff (staff_id, sname, srole, email_id, phone_number, spassword, ad
 ('STAFF05', 'Arjun Reddy', 'Bartender', 'arjun@restaurant.in', '9494949494', 'arjunpass', '54 Beach Rd, Vizag', TO_DATE('1987-08-14','YYYY-MM-DD'));
 
 -- Menu Items
+
 INSERT INTO menu_item (menu_item_id, menu_item_name, menu_item_category, menu_item_price) VALUES
 ('MENU01', 'Paneer Butter Masala', 'Main Course', 350);
 INSERT INTO menu_item (menu_item_id, menu_item_name, menu_item_category, menu_item_price) VALUES
@@ -35,6 +38,7 @@ INSERT INTO menu_item (menu_item_id, menu_item_name, menu_item_category, menu_it
 ('MENU05', 'Mango Lassi', 'Beverage', 90);
 
 -- Inventory
+
 INSERT INTO inventory (inventory_item_id, iname, quantity) VALUES
 ('INV001', 'Paneer', 60);
 INSERT INTO inventory (inventory_item_id, iname, quantity) VALUES
@@ -47,6 +51,7 @@ INSERT INTO inventory (inventory_item_id, iname, quantity) VALUES
 ('INV005', 'Curd', 50);
 
 -- Orders
+
 INSERT INTO orders (order_id, status, item_name, quantity, arrival_time, reservation_time, item_type, customer_id) VALUES
 ('ORD001', 'Completed', 'Paneer Butter Masala', 2, SYSTIMESTAMP, SYSTIMESTAMP, 'Dine-in', 'CUST001');
 INSERT INTO orders (order_id, status, item_name, quantity, arrival_time, reservation_time, item_type, customer_id) VALUES
@@ -59,6 +64,7 @@ INSERT INTO orders (order_id, status, item_name, quantity, arrival_time, reserva
 ('ORD005', 'Completed', 'Mango Lassi', 2, SYSTIMESTAMP, SYSTIMESTAMP, 'Delivery', 'CUST005');
 
 -- Sit Tables
+
 INSERT INTO sit_table (table_id, table_type, table_capacity, table_shape, table_status, order_id) VALUES
 ('TABLE1', 'VIP', 4, 'Round', 'Occupied', 'ORD001');
 INSERT INTO sit_table (table_id, table_type, table_capacity, table_shape, table_status, order_id) VALUES
@@ -71,6 +77,7 @@ INSERT INTO sit_table (table_id, table_type, table_capacity, table_shape, table_
 ('TABLE5', 'VIP', 4, 'Round', 'Available', NULL);
 
 -- Transactions
+
 INSERT INTO transactions (transaction_id, gratuities, total_amount, pay_cash, card_number, card_type, customer_id, order_id, staff_id) VALUES
 ('TRANS01', 50, 750, 'Yes', '4111111122223333', 'Visa', 'CUST001', 'ORD001', 'STAFF01');
 INSERT INTO transactions (transaction_id, gratuities, total_amount, pay_cash, card_number, card_type, customer_id, order_id, staff_id) VALUES
