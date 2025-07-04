@@ -1,3 +1,4 @@
+-- language=SQL
 -- Customers
 
 INSERT INTO customer (customer_id, cname, phone_number, cpassword, address, dob) VALUES
